@@ -6,7 +6,7 @@ import {
 
 import '../style.scss'
 
-export function App() {
+export function App () {
     return (<BrowserRouter>
         <Routes>
             <Route path="/" element={<p>Hello World</p>} />
