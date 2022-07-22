@@ -1,0 +1,21 @@
+stages:
+  - Pre-Build
+  - Build & Publish
+
+variables:
+  IMAGE_NAME: what-am-i-listening-to
+
+Lint:
+  stage: Pre-Build
+  image: node:latest
+  script:
+    - npm ci
+    - npm run lint
+
+Build & Publish:
+  stage: Build & Publish
+  services:
+    - docker:dind
+  image: docker:latest
+  script:
+    - docker build . -t $IMAGE_NAME:latest
