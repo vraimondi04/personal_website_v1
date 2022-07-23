@@ -37,7 +37,7 @@ Deploy to Google Cloud Run:
     when: manual
     script:
       - gcloud auth activate-service-account --key-file $GCLOUD_SERVICE_KEY_JSON
-      - gcloud deploy whatsreidlisteningto --image "$REPO_NAME/$IMAGE_NAME:latest" --project what-am-i-listening-to-357216 --platform managed --region us-east1
+      - gcloud run deploy whatsreidlisteningto --image "$REPO_NAME/$IMAGE_NAME:latest" --project what-am-i-listening-to-357216 --platform managed --region us-east1
 
 
 
