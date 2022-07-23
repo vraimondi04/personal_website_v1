@@ -12,10 +12,25 @@ Lint:
     - npm ci
     - npm run lint
 
-Build & Publish:
-  stage: Build & Publish
+Build Docker Image:
+  stage: Build
   services:
     - docker:dind
   image: docker:latest
   script:
-    - docker build . -t $IMAGE_NAME:latest
+    - docker build . -t $IMAGE_NAME:latest -o type=local,path=out
+  artifacts:
+    paths:
+      - out/
+
+Publish Docker Image:
+  stage: Build
+  services:
+    - docker:dind
+  image: google/cloud-sdk:latest
+  script:
+    - gcloud auth activate-service-account
+  needs:
+    - Build Docker Image
+
+
