@@ -3,7 +3,7 @@ stages:
   - Build & Publish
 
 variables:
-  IMAGE_NAME: "us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to:latest"
+  IMAGE_NAME: us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to
 
 Lint:
   stage: Pre-Build
@@ -20,9 +20,9 @@ Build & Publish:
   script:
     - echo $GCLOUD_SERVICE_KEY_JSON > ${HOME}/gcloud-service-key.json
     - docker login -u _json_key --password-stdin https://us-east1-docker.pkg.dev < ${HOME}/gcloud-service-key.json
-    - docker build . -t $IMAGE_NAME
-    - docker push $IMAGE_NAME
+    - docker build . -t "$IMAGE_NAME:$CI_COMMIT_TAG"
+    - docker push "$IMAGE_NAME:$CI_COMMIT_TAG"
   only:
-    - main
+    - tags
 
 
