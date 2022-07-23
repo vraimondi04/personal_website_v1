@@ -3,12 +3,12 @@ stages:
   - Build & Publish
   - Release
 
-variables:
-  REPO_LOCATION: # full path to the in artifact registry, i.e., us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to
-  IMAGE_NAME: # name of the docker image in artifact registry, i.e., whatamilisteningto
-  SERVICE_NAME: # name of the service in cloud run, i.e., whatsreidlisteningto
-  PROJECT_ID: # id of the project used, i.e., what-am-i-listening-to-357216
-  REGION: # i.e., us-east1
+# variables:
+#   REPO_LOCATION: # full path to the in artifact registry, i.e., us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to
+#   IMAGE_NAME: # name of the docker image in artifact registry, i.e., whatamilisteningto
+#   SERVICE_NAME: # name of the service in cloud run, i.e., whatsreidlisteningto
+#   PROJECT_ID: # id of the project used, i.e., what-am-i-listening-to-357216
+#   REGION: # i.e., us-east1
 
 Lint:
   stage: Pre-Build
