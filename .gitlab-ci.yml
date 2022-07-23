@@ -1,6 +1,7 @@
 stages:
   - Pre-Build
   - Build & Publish
+  - Release
 
 variables:
   REPO_NAME: us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to
@@ -27,5 +28,16 @@ Build & Publish:
     - docker push "$REPO_NAME/$IMAGE_NAME:latest"
   only:
     - tags
+  
+Deploy to Google Cloud Run:
+    stage: Release
+    image: google/cloud-sdk:latest
+    only:
+        - tags
+    when: manual
+    script:
+      - gcloud auth activate-service-account --key-file $GCLOUD_SERVICE_KEY_JSON
+      - gcloud deploy whatsreidlisteningto --image "$REPO_NAME/$IMAGE_NAME:latest" --project what-am-i-listening-to-357216 --platform managed --region us-east1
+
 
 
