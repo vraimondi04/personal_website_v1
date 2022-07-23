@@ -4,8 +4,11 @@ stages:
   - Release
 
 variables:
-  REPO_NAME: us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to
-  IMAGE_NAME: whatamilisteningto
+  REPO_LOCATION: # full path to the in artifact registry, i.e., us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to
+  IMAGE_NAME: # name of the docker image in artifact registry, i.e., whatamilisteningto
+  SERVICE_NAME: # name of the service in cloud run, i.e., whatsreidlisteningto
+  PROJECT_ID: # id of the project used, i.e., what-am-i-listening-to-357216
+  REGION: # i.e., us-east1
 
 Lint:
   stage: Pre-Build
@@ -16,28 +19,28 @@ Lint:
   except:
     - tags
 
-Build & Publish:
-  stage: Build & Publish
-  services:
-    - docker:dind
-  image: docker:latest
-  script:
-    - docker login -u _json_key --password-stdin https://us-east1-docker.pkg.dev < $GCLOUD_SERVICE_KEY_JSON
-    - docker build . -t "$REPO_NAME/$IMAGE_NAME:$CI_COMMIT_TAG" -t "$REPO_NAME/$IMAGE_NAME:latest"
-    - docker push "$REPO_NAME/$IMAGE_NAME:$CI_COMMIT_TAG" 
-    - docker push "$REPO_NAME/$IMAGE_NAME:latest"
-  only:
-    - tags
+# Build & Publish:
+#   stage: Build & Publish
+#   services:
+#     - docker:dind
+#   image: docker:latest
+#   script:
+#     - docker login -u _json_key --password-stdin https://$REGION-docker.pkg.dev < $GCLOUD_SERVICE_KEY_JSON
+#     - docker build . -t "$REPO_LOCATION/$IMAGE_NAME:$CI_COMMIT_TAG" -t "$REPO_LOCATION/$IMAGE_NAME:latest"
+#     - docker push "$REPO_LOCATION/$IMAGE_NAME:$CI_COMMIT_TAG" 
+#     - docker push "$REPO_LOCATION/$IMAGE_NAME:latest"
+#   only:
+#     - tags
   
-Deploy to Google Cloud Run:
-    stage: Release
-    image: google/cloud-sdk:latest
-    only:
-        - tags
-    when: manual
-    script:
-      - gcloud auth activate-service-account --key-file $GCLOUD_SERVICE_KEY_JSON
-      - gcloud run deploy whatsreidlisteningto --image "$REPO_NAME/$IMAGE_NAME:latest" --project what-am-i-listening-to-357216 --platform managed --region us-east1
+# Deploy to Google Cloud Run:
+#     stage: Release
+#     image: google/cloud-sdk:latest
+#     only:
+#         - tags
+#     when: manual
+#     script:
+#       - gcloud auth activate-service-account --key-file $GCLOUD_SERVICE_KEY_JSON
+#       - gcloud run deploy --image "$REPO_LOCATION/$IMAGE_NAME:latest" --project $PROJECT_ID --platform managed --region $REGION
 
 
 
