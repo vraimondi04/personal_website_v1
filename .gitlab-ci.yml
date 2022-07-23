@@ -20,8 +20,7 @@ Build & Publish:
     - docker:dind
   image: docker:latest
   script:
-    - echo $GCLOUD_SERVICE_KEY_JSON > ${HOME}/gcloud-service-key.json
-    - docker login -u _json_key --password-stdin https://us-east1-docker.pkg.dev < ${HOME}/gcloud-service-key.json
+    - docker login -u _json_key --password-stdin https://us-east1-docker.pkg.dev < $GCLOUD_SERVICE_KEY_JSON
     - docker build . -t "$IMAGE_NAME:$CI_COMMIT_TAG" -t "$IMAGE_NAME:latest"
     - docker push "$IMAGE_NAME:$CI_COMMIT_TAG" 
     - docker push "$IMAGE_NAME:latest"
