@@ -13,7 +13,7 @@ Lint:
     - npm run lint
 
 Build & Publish:
-  stage: Build
+  stage: Build & Publish
   services:
     - docker:dind
   image: docker:latest
