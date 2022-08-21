@@ -1,6 +1,11 @@
+import axios from 'axios'
 
 export default function Container () {
     // have function that makes axios post request for spotify information from backend
+    async function fetchData () {
+        const response = await axios.post('/api')
+        console.log(response.data)
+    }
     return (
         <section className="hero is-link is-fullheight">
             {/* Hero head: will stick at the top */}
@@ -47,11 +52,11 @@ export default function Container () {
             {/* TRY TO IMPLEMENT BULMA TILES INTO THE HERO-BODY */}
             <div className="hero-body">
                 <div className="container has-text-centered">
-                    <p className="title">
-                        Title
-                    </p>
+                    <button className="title" onClick={fetchData}>
+                        Who is Frank Ocean?
+                    </button>
                     <p className="subtitle">
-                        Subtitle
+                        -Reub
                     </p>
                 </div>
             </div>
