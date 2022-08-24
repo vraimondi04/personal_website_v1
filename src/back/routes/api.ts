@@ -6,6 +6,9 @@ dotenv.config()
 
 const router = express.Router()
 
+const clientID = process.env.CLIENT_ID
+const clientSecret = process.env.CLIENT_SECRET
+
 router.post('/', async (req, res) => {
     try {
         const result = await axios.post('https://accounts.spotify.com/api/token', {
