@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Tiles from './Tiles'
 
@@ -18,7 +18,7 @@ export default function Container () {
         if (!token && hash) {
             token = hash.substring(1).split('&').find(elem => elem.startsWith('access_token')).split('=')[1]
             // console.log(token)
-            window.location.hash = ''
+            // window.location.hash = ''
             window.localStorage.setItem('token', token)
         }
 
@@ -26,10 +26,10 @@ export default function Container () {
     })
 
     // have function that makes axios post request for spotify information from backend
-    async function fetchData () {
-        const response = await axios.post('/api')
-        console.log(response.data)
-    }
+    // async function fetchData () {
+    //     const response = await axios.post('/api')
+    //     console.log(response.data)
+    // }
     return (
         <div>
             <section className="hero has-background-link-light is-fullheight">
@@ -50,7 +50,10 @@ export default function Container () {
 
                             <div id="navbarMenuHeroC" className="navbar-menu">
                                 <div className="navbar-end">
-                                    <a className="navbar-item">
+                                    <a className="navbar-item" onClick={() => {
+                                        const anchor = document.querySelector('#about')
+                                        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                                    }}>
                                         About
                                     </a>
                                     <a className="navbar-item">
@@ -101,10 +104,10 @@ export default function Container () {
                 </div> */}
             </section>
 
-            <section className="section is-large">
+            <section className="section is-large" id='about'>
                 <h1 className="title">Large section</h1>
                 <h2 className="subtitle">
-                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+                    A simple container to divide your page into <strong>sections</strong>, like the one you are currently reading.
                 </h2>
             </section>
         </div>

@@ -1,5 +1,9 @@
 // import myImage from '../images/ash_ketchum.jpg'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReact, faDocker, faGitAlt, faPython, faNode, faJsSquare, faAws } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase } from '@fortawesome/free-solid-svg-icons'
+
 export default function Tiles () {
     return (
         <div className="tile is-ancestor">
@@ -28,7 +32,14 @@ export default function Tiles () {
                 <div className="tile is-parent">
                     <article className="tile is-child notification is-link">
                         <p className="title">Technologies and Tools</p>
-                        <p className="subtitle">Add LOGOS of React, Python, TypeScript, etc</p>
+                        <FontAwesomeIcon className='fa-3x mr-5 ml-4' icon={faReact}/>
+                        <FontAwesomeIcon className='fa-3x mr-5' icon={faNode}/>
+                        <FontAwesomeIcon className='fa-3x mr-5' icon={faPython}/>
+                        <FontAwesomeIcon className='fa-3x mr-5' icon={faJsSquare}/>
+                        <FontAwesomeIcon className='fa-3x mr-5' icon={faDocker}/>
+                        <FontAwesomeIcon className='fa-3x mr-5' icon={faGitAlt}/>
+                        <FontAwesomeIcon className='fa-3x mr-5' icon={faDatabase}/>
+                        <FontAwesomeIcon className='fa-3x mr-5' icon={faAws}/>
                         <div className="content">
                             {/* <!-- Content --> */}
                         </div>
