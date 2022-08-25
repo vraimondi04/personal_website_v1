@@ -1,6 +1,9 @@
 // import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import Tiles from './Tiles'
+import About from './About'
 
 export default function Container () {
     const clientID = 'c6ebbba001ab459c9d4bd705a0a9671d'
@@ -65,7 +68,7 @@ export default function Container () {
                                     {!token
                                         ? <span className="navbar-item">
                                             <a className="button is-success" href={`https://accounts.spotify.com/authorize?client_id=${clientID}&redirect_uri=http://localhost:3001&response_type=token`}>
-                                                Spotify
+                                                Spotify<FontAwesomeIcon className='ml-1' icon={faSpotify}/>
                                             </a>
                                         </span>
                                         : <span className="navbar-item">
@@ -87,29 +90,9 @@ export default function Container () {
                     </div>
                 </div>
 
-                {/* Hero footer: will stick at the bottom */}
-                {/* <div className="hero-foot">
-                    <nav className="tabs is-boxed is-fullwidth">
-                        <div className="container">
-                            <ul>
-                                <li className="is-active"><a>Overview</a></li>
-                                <li><a>Modifiers</a></li>
-                                <li><a>Grid</a></li>
-                                <li><a>Elements</a></li>
-                                <li><a>Components</a></li>
-                                <li><a>Layout</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div> */}
             </section>
 
-            <section className="section is-large" id='about'>
-                <h1 className="title">Large section</h1>
-                <h2 className="subtitle">
-                    A simple container to divide your page into <strong>sections</strong>, like the one you are currently reading.
-                </h2>
-            </section>
+            <About/>
         </div>
     )
 }
