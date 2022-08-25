@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faDocker, faGitAlt, faPython, faNode, faJsSquare, faAws, faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase, faEnvelope, faCodeMerge } from '@fortawesome/free-solid-svg-icons'
+import { faDatabase, faEnvelope, faCodeMerge, faComments, faMusic } from '@fortawesome/free-solid-svg-icons'
 
 export default function Tiles () {
     return (
@@ -15,7 +15,10 @@ export default function Tiles () {
                             <p className="subtitle">-Reub</p>
                         </article>
                         <article className="tile is-child notification is-info">
-                            <p className="title ml-4">Contact Me!</p>
+                            <p className="title ml-4">
+                                Contact Me
+                                <FontAwesomeIcon className='fa ml-3' icon={faComments}/>
+                            </p>
                             <FontAwesomeIcon className='fa-3x mr-5 ml-3 is-clickable' icon={faLinkedin} onClick={() => window.open('https://www.linkedin.com/in/vincent-raimondi-8ab8971b6/')}/>
                             <FontAwesomeIcon className='fa-3x mr-5' icon={faGithub}/>
                             <FontAwesomeIcon className='fa-3x mr-5' icon={faInstagram}/>
@@ -55,7 +58,10 @@ export default function Tiles () {
             <div className="tile is-parent">
                 <article className="tile is-child notification is-success">
                     <div className="content">
-                        <p className="title">Suggest Me Songs!</p>
+                        <p className="title">
+                            Suggest Me Songs
+                            <FontAwesomeIcon className='fa ml-3' icon={faMusic}/>
+                        </p>
                         <p className="subtitle">add fav genres/songs?</p>
                         <div className="content">
                             {/* <!-- Content --> */}

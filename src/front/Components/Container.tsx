@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import Tiles from './Tiles'
 import About from './About'
+import Projects from './Projects'
 
 export default function Container () {
     const clientID = 'c6ebbba001ab459c9d4bd705a0a9671d'
@@ -38,7 +39,7 @@ export default function Container () {
             <section className="hero has-background-link-light is-fullheight">
                 {/* Hero head: will stick at the top */}
                 <div className="hero-head">
-                    <header className="navbar">
+                    <header className="navbar is-fixed-top">
                         <div className="container">
                             <div className="navbar-brand">
                                 <a className="navbar-item">
@@ -59,7 +60,10 @@ export default function Container () {
                                     }}>
                                         About
                                     </a>
-                                    <a className="navbar-item">
+                                    <a className="navbar-item"onClick={() => {
+                                        const anchor = document.querySelector('#projects')
+                                        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                                    }}>
                                         Projects
                                     </a>
                                     <a className="navbar-item">
@@ -93,6 +97,7 @@ export default function Container () {
             </section>
 
             <About/>
+            <Projects/>
         </div>
     )
 }
