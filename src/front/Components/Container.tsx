@@ -5,6 +5,7 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import Tiles from './Tiles'
 import About from './About'
 import Projects from './Projects'
+import Resume from './Resume'
 
 export default function Container () {
     const clientID = 'c6ebbba001ab459c9d4bd705a0a9671d'
@@ -66,7 +67,10 @@ export default function Container () {
                                     }}>
                                         Projects
                                     </a>
-                                    <a className="navbar-item">
+                                    <a className="navbar-item" onClick={() => {
+                                        const anchor = document.querySelector('#resume')
+                                        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                                    }}>
                                         Resume
                                     </a>
                                     {!token
@@ -98,6 +102,7 @@ export default function Container () {
 
             <About/>
             <Projects/>
+            <Resume/>
         </div>
     )
 }
