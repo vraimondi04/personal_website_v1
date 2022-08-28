@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faHtml5, faCss3Alt, faReact, faNode, faDocker, faJsSquare } from '@fortawesome/free-brands-svg-icons'
 import { faLocationDot, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion'
 
 export default function Projects () {
     return (
@@ -11,7 +12,7 @@ export default function Projects () {
 
                 <div className="tile is-ancestor">
                     <div className="tile is-parent">
-                        <article className="tile is-child box">
+                        <motion.article className="tile is-child box" whileHover={{ scale: 1.1 }}>
                             <p className="title"> Personal Website</p>
                             <p className="subtitle">
                                 (You are here
@@ -27,11 +28,11 @@ export default function Projects () {
                                 <FontAwesomeIcon className='fa-3x ml-3 mr-5' icon={faDocker}/>
                                 <FontAwesomeIcon className='fa-3x ml-3' icon={faGoogle}/>
                             </div>
-                        </article>
+                        </motion.article>
                     </div>
 
                     <div className="tile is-parent">
-                        <article className="tile is-child box">
+                        <motion.article className="tile is-child box" whileHover={{ scale: 1.1 }}>
                             <p className="title">ScottyMaps</p>
                             <p className="subtitle">
                                 Devpost
@@ -45,11 +46,11 @@ export default function Projects () {
                                 <FontAwesomeIcon className='fa-3x ml-4 mr-5' icon={faJsSquare}/>
                                 <FontAwesomeIcon className='fa-3x ml-4' icon={faGoogle}/>
                             </div>
-                        </article>
+                        </motion.article>
                     </div>
 
                     <div className="tile is-parent">
-                        <article className="tile is-child box">
+                        <motion.article className="tile is-child box" whileHover={{ scale: 1.1 }}>
                             <p className="title">PlanetHer</p>
                             <p className="subtitle">
                                 Devpost
@@ -62,7 +63,7 @@ export default function Projects () {
                                 <FontAwesomeIcon className='fa-3x ml-6 mr-5' icon={faCss3Alt}/>
                                 <FontAwesomeIcon className='fa-3x ml-6 mr-5' icon={faJsSquare}/>
                             </div>
-                        </article>
+                        </motion.article>
                     </div>
                 </div>
             </section>

@@ -40,10 +40,13 @@ export default function Container () {
             <section className="hero has-background-link-light is-fullheight">
                 {/* Hero head: will stick at the top */}
                 <div className="hero-head">
-                    <header className="navbar is-fixed-top">
+                    <header className="navbar is-fixed-top has-background-link-light">
                         <div className="container">
                             <div className="navbar-brand">
-                                <a className="navbar-item">
+                                <a className="navbar-item" onClick={() => {
+                                    const anchor = document.querySelector('#tiles')
+                                    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                                }}>
                                     What is Vincent Listening to?
                                 </a>
                                 <span className="navbar-burger" data-target="navbarMenuHeroC">
