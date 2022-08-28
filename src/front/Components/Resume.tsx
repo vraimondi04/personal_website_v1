@@ -1,4 +1,3 @@
-import { Document, Page } from 'react-pdf'
 
 export default function Resume () {
     return (
@@ -7,11 +6,14 @@ export default function Resume () {
                 <h1 className="title">My Resume</h1>
                 <h2 className="subtitle"></h2>
 
-                <div>
-                    <Document file='https://drive.google.com/file/d/1JmutJwt_E6LMLyFxt7M1YVml1qkmqekq/view?usp=sharing'>
-                        <Page pageNumber={1}/>
-                    </Document>
+                <div className="tile is-ancestor">
+                    <div className="tile is-parent">
+                        <article className="tile is-child box">
+                            <iframe src="https://drive.google.com/file/d/11mJUQ1W_ha07LwneBsjZQDD7FiD55wow/preview" width="100%" height="480" allow="autoplay"></iframe>
+                        </article>
+                    </div>
                 </div>
+
             </section>
         </div>
     )

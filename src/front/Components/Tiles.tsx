@@ -20,9 +20,9 @@ export default function Tiles () {
                                 <FontAwesomeIcon className='fa ml-3' icon={faComments}/>
                             </p>
                             <FontAwesomeIcon className='fa-3x mr-5 ml-3 is-clickable' icon={faLinkedin} onClick={() => window.open('https://www.linkedin.com/in/vincent-raimondi-8ab8971b6/')}/>
-                            <FontAwesomeIcon className='fa-3x mr-5' icon={faGithub}/>
-                            <FontAwesomeIcon className='fa-3x mr-5' icon={faInstagram}/>
-                            <FontAwesomeIcon className='fa-3x' icon={faEnvelope}/>
+                            <FontAwesomeIcon className='fa-3x mr-5 is-clickable' icon={faGithub} onClick={() => window.open('https://github.com/vraimondi04')}/>
+                            <FontAwesomeIcon className='fa-3x mr-5 is-clickable' icon={faInstagram} onClick={() => window.open('https://www.instagram.com/vincent.raimondi4/')}/>
+                            <FontAwesomeIcon className='fa-3x is-clickable' icon={faEnvelope} onClick={() => window.open('mailto:vraim001@ucr.edu')}/>
                         </article>
                     </div>
                     <div className="tile is-parent">
@@ -59,13 +59,12 @@ export default function Tiles () {
                 <article className="tile is-child notification is-success">
                     <div className="content">
                         <p className="title">
-                            Suggest Me Songs
+                            What I'm Listening To
                             <FontAwesomeIcon className='fa ml-3' icon={faMusic}/>
                         </p>
-                        <p className="subtitle">add fav genres/songs?</p>
+                        <p className="subtitle">Add form here?</p>
                         <div className="content">
-                            {/* <!-- Content --> */}
-                        </div>
+                            <iframe src="https://open.spotify.com/embed/playlist/30CtbiCyhox7EXIdOFj83A?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>                        </div>
                     </div>
                 </article>
             </div>
