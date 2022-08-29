@@ -40,7 +40,7 @@ Deploy to Google Cloud Run:
     when: manual
     script:
       - gcloud auth activate-service-account --key-file $GCLOUD_SERVICE_KEY_JSON
-      - gcloud run deploy --image "$REPO_LOCATION/$IMAGE_NAME:latest" --project $PROJECT_ID --platform managed --region $REGION
+      - gcloud run deploy $SERVICE_NAME --image "$REPO_LOCATION/$IMAGE_NAME:latest" --project $PROJECT_ID --platform managed --region $REGION
 
 
 
