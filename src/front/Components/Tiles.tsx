@@ -65,7 +65,8 @@ export default function Tiles () {
                         </p>
                         {/* <p className="subtitle">Add form here?</p> */}
                         <div className="content">
-                            <iframe src="https://open.spotify.com/embed/playlist/30CtbiCyhox7EXIdOFj83A?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>                        </div>
+                            <iframe src="https://open.spotify.com/embed/playlist/66pC4xWeliKhwNMukO5CEs?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        </div>
                     </div>
                 </motion.article>
             </div>

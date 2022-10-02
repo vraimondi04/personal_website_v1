@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
-import { faSchool, faCity, faAward } from '@fortawesome/free-solid-svg-icons'
+import { faSchool, faCity, faAward, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 export default function About () {
     return (
@@ -23,7 +23,7 @@ export default function About () {
                                 September 2019
                                 <FontAwesomeIcon className='fa-2x ml-3' icon={faSchool}/>
                             </p>
-                            <p><strong>Started enrollment at UC Riverside!</strong></p>
+                            <p><strong>Started enrollment at UC Riverside</strong></p>
                             <p>-Majoring in Computer Science with Business Applications</p>
                             {/* <img className='ml-6 mt-2' src='https://upload.wikimedia.org/wikipedia/en/thumb/5/51/UC_Riverside_seal.svg/125px-UC_Riverside_seal.svg.png' alt='UCR'/> */}
                         </div>
