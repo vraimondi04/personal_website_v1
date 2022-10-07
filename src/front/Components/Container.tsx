@@ -1,5 +1,4 @@
 // import axios from 'axios'
-import Tiles from './Tiles'
 import About from './About'
 import Projects from './Projects'
 import Resume from './Resume'
@@ -10,10 +9,21 @@ export default function Container () {
     return (
         <div>
             <Homepage/>
-            <About/>
-            <Projects/>
-            <Resume/>
-            <Spotify/>
+            <section id='about'>
+                <About/>
+            </section>
+
+            <section id='projects'>
+                <Projects/>
+            </section>
+
+            <section id='resume'>
+                <Resume/>
+            </section>
+
+            <section id='spotify'>
+                <Spotify/>
+            </section>
         </div>
     )
 }

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 export default function Tiles () {
     return (
-        <div className="tile is-ancestor" id='tiles'>
+        <section className="tile is-ancestor">
             <div className="tile is-vertical is-8">
                 <div className="tile">
                     <div className="tile is-parent is-vertical">
@@ -20,10 +20,12 @@ export default function Tiles () {
                                 Contact Me
                                 <FontAwesomeIcon className='fa ml-3' icon={faComments}/>
                             </p>
-                            <FontAwesomeIcon className='fa-3x mr-5 ml-3 is-clickable' icon={faLinkedin} onClick={() => window.open('https://www.linkedin.com/in/vincent-raimondi-8ab8971b6/')}/>
-                            <FontAwesomeIcon className='fa-3x mr-5 is-clickable' icon={faGithub} onClick={() => window.open('https://github.com/vraimondi04')}/>
-                            <FontAwesomeIcon className='fa-3x mr-5 is-clickable' icon={faInstagram} onClick={() => window.open('https://www.instagram.com/vincent.raimondi4/')}/>
-                            <FontAwesomeIcon className='fa-3x is-clickable' icon={faEnvelope} onClick={() => window.open('mailto:vraim001@ucr.edu')}/>
+                            <div className='is-flex is-justify-content-space-evenly is-align-items-center'>
+                                <FontAwesomeIcon className='fa-3x is-clickable' icon={faLinkedin} onClick={() => window.open('https://www.linkedin.com/in/vincent-raimondi-8ab8971b6/')}/>
+                                <FontAwesomeIcon className='fa-3x is-clickable' icon={faGithub} onClick={() => window.open('https://github.com/vraimondi04')}/>
+                                <FontAwesomeIcon className='fa-3x is-clickable' icon={faInstagram} onClick={() => window.open('https://www.instagram.com/vincent.raimondi4/')}/>
+                                <FontAwesomeIcon className='fa-3x is-clickable' icon={faEnvelope} onClick={() => window.open('mailto:vraim001@ucr.edu')}/>
+                            </div>
                         </motion.article>
                     </div>
                     <div className="tile is-parent">
@@ -42,14 +44,16 @@ export default function Tiles () {
                             Technologies and Tools
                             <FontAwesomeIcon className='fa ml-3' icon={faCodeMerge}/>
                         </p>
-                        <FontAwesomeIcon className='fa-3x mr-5 ml-4' icon={faReact}/>
-                        <FontAwesomeIcon className='fa-3x mr-5' icon={faNode}/>
-                        <FontAwesomeIcon className='fa-3x mr-5' icon={faPython}/>
-                        <FontAwesomeIcon className='fa-3x mr-5' icon={faJsSquare}/>
-                        <FontAwesomeIcon className='fa-3x mr-5' icon={faDocker}/>
-                        <FontAwesomeIcon className='fa-3x mr-5' icon={faGitAlt}/>
-                        <FontAwesomeIcon className='fa-3x mr-5' icon={faDatabase}/>
-                        <FontAwesomeIcon className='fa-3x mr-5' icon={faAws}/>
+                        <div className='is-flex is-justify-content-space-evenly is-align-items-center'>
+                            <FontAwesomeIcon className='fa-3x' icon={faReact}/>
+                            <FontAwesomeIcon className='fa-3x' icon={faNode}/>
+                            <FontAwesomeIcon className='fa-3x' icon={faPython}/>
+                            <FontAwesomeIcon className='fa-3x' icon={faJsSquare}/>
+                            <FontAwesomeIcon className='fa-3x' icon={faDocker}/>
+                            <FontAwesomeIcon className='fa-3x' icon={faGitAlt}/>
+                            <FontAwesomeIcon className='fa-3x' icon={faDatabase}/>
+                            <FontAwesomeIcon className='fa-3x' icon={faAws}/>
+                        </div>
                         <div className="content">
                             {/* <!-- Content --> */}
                         </div>
@@ -70,6 +74,6 @@ export default function Tiles () {
                     </div>
                 </motion.article>
             </div>
-        </div>
+        </section>
     )
 }
