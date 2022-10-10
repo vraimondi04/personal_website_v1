@@ -2,3 +2,11 @@
 @import "bulma-timeline/dist/css/bulma-timeline.sass";
 
 html{scroll-behavior:smooth}
+
+.notification {
+    padding: 1.25rem 1.5rem 1.25rem 1.5rem
+}
+
+.ml-2 {
+    margin-left: 0 !important
+}

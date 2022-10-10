@@ -22,16 +22,16 @@ export default function Homepage () {
 
                         <div id="navbarMenuHeroC" className={`navbar-menu ${click ? 'is-active' : ''}`}>
                             <div className="navbar-end">
-                                <a className="navbar-item" href='#about'>
+                                <a className="navbar-item" href='#about' onClick={() => setClick(!click)}>
                                     About
                                 </a>
-                                <a className="navbar-item" href='#projects'>
+                                <a className="navbar-item" href='#projects' onClick={() => setClick(!click)}>
                                     Projects
                                 </a>
-                                <a className="navbar-item" href='#resume'>
+                                <a className="navbar-item" href='#resume' onClick={() => setClick(!click)}>
                                     Resume
                                 </a>
-                                <a className="navbar-item" href='#spotify'>
+                                <a className="navbar-item" href='#spotify' onClick={() => setClick(!click)}>
                                     Spotify
                                 </a>
                             </div>

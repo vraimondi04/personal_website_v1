@@ -41,10 +41,10 @@ export default function Tiles () {
                 <div className="tile is-parent">
                     <motion.article className="tile is-child notification is-link" whileHover={{ scale: 1.1 }}>
                         <p className="title">
-                            Technologies and Tools
+                            Technologies + Tools
                             <FontAwesomeIcon className='fa ml-3' icon={faCodeMerge}/>
                         </p>
-                        <div className='is-flex is-justify-content-space-evenly is-align-items-center'>
+                        <div className='is-flex-wrap-wrap is-justify-content-space-evenly is-align-items-center'>
                             <FontAwesomeIcon className='fa-3x' icon={faReact}/>
                             <FontAwesomeIcon className='fa-3x' icon={faNode}/>
                             <FontAwesomeIcon className='fa-3x' icon={faPython}/>
