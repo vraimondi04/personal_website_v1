@@ -15,7 +15,7 @@ export default function Projects () {
                         <p className="title"> Personal Website</p>
                         <p className="subtitle">
                             (You are here
-                            <FontAwesomeIcon className='fa ml-2 mr-1' icon={faLocationDot}/>
+                            <FontAwesomeIcon className='fa pl-2 pr-1' icon={faLocationDot}/>
                             ) GitLab
                             <a href='https://gitlab.com/vraimondi04/what-is-vincent-listening-to' target='_blank' rel="noreferrer">
                                 <FontAwesomeIcon className='fa ml-3 is-clickable' icon={faArrowUpRightFromSquare}/>

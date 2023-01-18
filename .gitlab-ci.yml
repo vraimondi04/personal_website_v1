@@ -6,7 +6,7 @@ stages:
 variables:
   REPO_LOCATION: us-west1-docker.pkg.dev/what-am-i-listening-to-1104/whatsvincentlisteningto-repo1 # full path to the in artifact registry, i.e., us-east1-docker.pkg.dev/what-am-i-listening-to-357216/what-am-i-listening-to
   IMAGE_NAME: whatamilisteningto # name of the docker image in artifact registry, i.e., whatamilisteningto
-  SERVICE_NAME: test-service # name of the service in cloud run, i.e., whatsreidlisteningto
+  SERVICE_NAME: personal-website-v1 # name of the service in cloud run, i.e., whatsreidlisteningto
   PROJECT_ID: what-am-i-listening-to-1104 # id of the project used, i.e., what-am-i-listening-to-357216
   REGION: us-west1 # i.e., us-east1
 

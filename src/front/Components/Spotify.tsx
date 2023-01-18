@@ -39,9 +39,15 @@ export default function Spotify (props:any) {
                 ? <a className="button is-success" href={`https://accounts.spotify.com/authorize?client_id=${clientID}&redirect_uri=https://vincentraimondi.com/&response_type=token`}>
                     Spotify<FontAwesomeIcon className='ml-1' icon={faSpotify}/>
                 </a>
-                : <a className="button is-success is-inverted" onClick={logout}>
+                : <div>
+                    <a className="button is-success is-inverted" onClick={logout}>
                     Logout
-                </a>
+                    </a>
+
+                    {/* <p>
+                        hello
+                    </p> */}
+                </div>
             }
 
         </section>
